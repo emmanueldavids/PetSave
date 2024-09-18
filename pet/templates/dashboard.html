@@ -28,20 +28,20 @@
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href="index"><img src="{% static 'assets/images/logo.svg' %}" alt="logo" /></a>
-          <a class="sidebar-brand brand-logo-mini" href="index"><img src="{% static 'assets/images/logo-mini.svg' %}" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo" href="index"><img src="{% static 'assets/images/logo2.jpg' %}" alt="PetSave" /></a>
+          <a class="sidebar-brand brand-logo-mini" href="index"><img src="{% static 'assets/images/logo2.jpg' %}" alt="PetSave" /></a>
         </div>
         <ul class="nav">
           <li class="nav-item profile">
             <div class="profile-desc">
               <div class="profile-pic">
                 <div class="count-indicator">
-                  <img class="img-xs rounded-circle " src="{% static 'assets/images/faces/face15.jpg' %}" alt="">
+                  <img class="img-xs rounded-circle " src="{% static 'assets/images/faces/face5.jpg' %}" alt="">
                   <span class="count bg-success"></span>
                 </div>
                 <div class="profile-name">
                   <h5 class="mb-0 font-weight-normal"> {{request.user}} </h5>
-                  <span>Gold Member</span>
+                  <span>User Id: {{request.user.id}}</span>
                 </div>
               </div>
               <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
@@ -278,7 +278,7 @@
               </span>
             </div>
 
-            <div class="row">
+            {% comment %} <div class="row">
               <div class="col-md-6 col-xl-4 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
@@ -437,7 +437,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> {% endcomment %}
             
           </div>
           <!-- content-wrapper ends -->
