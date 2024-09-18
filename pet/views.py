@@ -27,14 +27,19 @@ def contact(request):
 def logout(request):
     if request.method == 'POST':
         logout(request)
+        request.session.delete()
         return redirect('index.html')
 
 @login_required
 def dashboard(request):
-    # user = request.user
+    if logout == True:
+        return redirect('login')
+    # if not request.user.is_authenticated:
+    #     return redirect('login')
+
     money = wallet.objects.get(id= 1)
     donation = Donation.objects.filter()
-    
+
     for donate in donation:
         amount = donate.amount
     
