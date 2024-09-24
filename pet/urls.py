@@ -1,7 +1,6 @@
-from django.urls import path, include
-from . import views
-from rest_framework.routers import DefaultRouter
 from django.urls import path
+from . import views
+
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -12,7 +11,8 @@ urlpatterns = [
 
     path('login', views.login, name='login'),
     path('register', views.register, name='register'),
-    # path('logout', views.logout, name='logout'),
     path('dashboard', views.dashboard, name='dashboard'),
     path('donate', views.donate, name='donate'),
+    
+    path('verify-otp/<int:user_id>/<str:otp_code>/', views.verify_otp, name='verify_otp'),
 ]

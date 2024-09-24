@@ -101,7 +101,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
@@ -112,6 +111,18 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+# Email OPT to Users
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER = 'khoswift@gmail.com'
+EMAIL_HOST_PASSWORD = 'your password'
+# DEFAULT_FROM_EMAIL = 'emmanueldavids417@gmail.com'
+# SERVER_EMAIL = 'emmanueldavids417@gmail.com'
 
 
 # Static files (CSS, JavaScript, Images)

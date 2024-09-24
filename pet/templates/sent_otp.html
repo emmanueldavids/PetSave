@@ -1,0 +1,15 @@
+<!-- Extend base template -->
+{% extends 'base.html' %}
+
+<!-- Define content block -->
+{% block content %}
+
+  <!-- OTP sent message -->
+  <div class="container">
+    <h1>OTP Sent</h1>
+    <p>An OTP has been sent to your phone number.</p>
+    <p>Please check your phone and enter the OTP on the next page.</p>
+    <a href="{% url 'verify_otp' (link unavailable) %}">Proceed to OTP verification</a>
+  </div>
+
+{% endblock %}
